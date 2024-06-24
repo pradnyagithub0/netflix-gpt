@@ -73,6 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Netfilx GPT 
 1) created by create react app
 2) integrated tailwind
+3) header
+4) login form
 
 # Features 
 - Login / signup
