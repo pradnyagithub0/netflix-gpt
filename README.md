@@ -71,10 +71,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Netfilx GPT 
-1) created by create react app
-2) integrated tailwind
-3) header
-4) login form
+ created by create react app
+ integrated tailwind
+ header
+ Routing
+ login form
+ Signup form 
+ form validation
+ useReff hook
 
 # Features 
 - Login / signup
