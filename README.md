@@ -78,12 +78,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  login form
  Signup form 
  form validation
- useReff hook
+ useRef hook
 
 # Features 
 - Login / signup
     - sign in / signup form 
     - redirect to browse page
+
+- Authentication (need backend - google fairbase)   
 
 - browse page (after authentication)
    - header

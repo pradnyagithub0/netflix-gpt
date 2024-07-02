@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 import Header from "./Header";
-import background from "../utils/assets/images/background.jpg";
+import background from "../assets/images/background.jpg";
 import {checkVlidateData} from '../utils/validate';
 
 const Login = () => {
