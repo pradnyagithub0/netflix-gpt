@@ -79,13 +79,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  Signup form 
  form validation
  useRef hook
+ firebase setup
+ deploy project on firebase
+ create signup user account in firebase
 
 # Features 
 - Login / signup
     - sign in / signup form 
     - redirect to browse page
 
-- Authentication (need backend - google fairbase)   
+- Authentication (need backend - google fairbase) 
+  i added google analystics with firebase 
+  - we deploy our app with firebase this is the live url - https://netflixgpt-8c284.web.app  
 
 - browse page (after authentication)
    - header
