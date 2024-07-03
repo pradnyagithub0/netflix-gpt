@@ -2,22 +2,28 @@ import React, { useState, useRef } from "react";
 import Header from "./Header";
 import background from "../assets/images/background.jpg";
 import { checkVlidateData } from "../utils/validate";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  updateProfile,
+} from "firebase/auth";
 import { auth } from "../utils/firebase";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 
 const Login = () => {
   const [isSignInForm, setIsSigninForm] = useState(true);
   const [errMsg, setErrMsg] = useState("");
-
+  const navigate = useNavigate();
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
+  const dispatch = useDispatch();
 
   const handleButtonClick = () => {
     // validate form data
-    const messg = checkVlidateData(
-      email.current.value,
-      password.current.value
-    );
+    const messg = checkVlidateData(email.current.value, password.current.value);
     setErrMsg(messg);
 
     if (messg) return; //if messge exist means error is there so will stop exeution here otherwise go to next line
@@ -31,7 +37,26 @@ const Login = () => {
       )
         .then((userCredential) => {
           const user = userCredential.user;
-          console.log(user);
+
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/101970172?v=4",
+          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+              navigate("/browse");
+            })
+            .catch((error) => {
+              setErrMsg(error.message);
+            });
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -40,24 +65,20 @@ const Login = () => {
         });
     } else {
       //sign in logic
-      signInWithEmailAndPassword(auth, email.current.value,
-        password.current.value)
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
         .then((userCredential) => {
-        
           const user = userCredential.user;
-          // ...
+          navigate("/browse");
         })
         .catch((error) => {
           const errorCode = error.code;
           const errorMessage = error.message;
           setErrMsg(errorCode + "-" + errorMessage);
         });
-    }
-
-    // other way to do the same thing is u can wriye like this but 1st one is good way to do this
-
-    if (!messg) {
-      // write sign in / sign up logic here
     }
   };
 
@@ -83,6 +104,7 @@ const Login = () => {
         {!isSignInForm && (
           <input
             type="text"
+            ref={name}
             placeholder="Full Name"
             className="p-2 mb-4 w-full bg-gray-800"
           />
