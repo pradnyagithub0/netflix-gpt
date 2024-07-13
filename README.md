@@ -86,7 +86,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  created redux store with userSlice
  implemented signout 
  update profile
-
+ bug fix of signup user, display name and profile picture
+ if user not loged in - redirect to login and visevarsa
+ unsubscribe to the onAuthStateChanged callback
+ add hardcoded values in constant.js file in utils
 
 # Features 
 - Login / signup
