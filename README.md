@@ -90,6 +90,15 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  if user not loged in - redirect to login and visevarsa
  unsubscribe to the onAuthStateChanged callback
  add hardcoded values in constant.js file in utils
+ register for TMDB website, create app and get access token 
+ get data from now playing api 
+ custom hook for nowplaying movies
+ update store with movie data 
+ planning for main container and secandary container
+ fetch data of movie trailer vidio and update store
+ embeded the utube vedio and make it autoplay and mute 
+ added tailwind css to make main container look awesome
+
 
 # Features 
 - Login / signup
@@ -99,6 +108,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Authentication (need backend - google fairbase) 
   i added google analystics with firebase 
   - we deploy our app with firebase this is the live url - https://netflixgpt-8c284.web.app  
+  - deployed on vercel also - https://netflix-gpt-zeta-six.vercel.app/
 
 - browse page (after authentication)
    - header

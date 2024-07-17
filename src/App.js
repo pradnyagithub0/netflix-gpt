@@ -1,6 +1,7 @@
 import { Provider } from 'react-redux';
 import Body from './components/Body';
 import appStore from './utils/appStore';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
   return (

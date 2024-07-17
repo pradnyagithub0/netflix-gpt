@@ -44,7 +44,7 @@ const Header = () => {
       <img src={Netflix_Logo} alt="logo_image" className="w-44" />
       {user && (
         <div className="flex items-center p-2">
-          <h3 className="me-4 font-bold text-white">Hello!! {user?.displayName}</h3>
+          <h3 className="me-4 font-bold text-white">{user?.displayName}</h3>
           <img
             src={user?.photoURL}
             alt="profileImage"
@@ -52,9 +52,9 @@ const Header = () => {
           />
           <button
             onClick={handleSignOut}
-            className="bg-red-500 text-white p-2 rounded-xl"
+            className="text-white p-2 rounded-xl"
           >
-            Sign Out
+            (Sign Out)
           </button>
         </div>
       )}
