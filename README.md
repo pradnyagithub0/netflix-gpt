@@ -71,33 +71,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 # Netfilx GPT 
- created by create react app
- integrated tailwind
- header
- Routing
- login form
- Signup form 
- form validation
- useRef hook
- firebase setup
- deploy project on firebase
- create signup user account in firebase
- implement sign in user api 
- created redux store with userSlice
- implemented signout 
- update profile
- bug fix of signup user, display name and profile picture
- if user not loged in - redirect to login and visevarsa
- unsubscribe to the onAuthStateChanged callback
- add hardcoded values in constant.js file in utils
- register for TMDB website, create app and get access token 
- get data from now playing api 
- custom hook for nowplaying movies
- update store with movie data 
- planning for main container and secandary container
- fetch data of movie trailer vidio and update store
- embeded the utube vedio and make it autoplay and mute 
- added tailwind css to make main container look awesome
+ - created by create react app
+ - integrated tailwind
+ - header
+ - Routing
+ - login form
+ - Signup form 
+ - form validation
+ - useRef hook
+ - firebase setup
+ - deploy project on firebase
+ - create signup user account in firebase
+ - implement sign in user api 
+ - created redux store with userSlice
+ - implemented signout 
+ - update profile
+ - bug fix of signup user, display name and profile picture
+ - if user not loged in - redirect to login and visevarsa
+ - unsubscribe to the onAuthStateChanged callback
+ - add hardcoded values in constant.js file in utils
+ - register for TMDB website, create app and get access token 
+ - get data from now playing api 
+ - custom hook for nowplaying movies
+ - update store with movie data 
+ - planning for main container and secandary container
+ - fetch data of movie trailer vidio and update store
+ - embeded the utube vedio and make it autoplay and mute 
+ - added tailwind css to make main container look awesome
+ - Build secandary component
 
 
 # Features 
