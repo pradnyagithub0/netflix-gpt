@@ -99,6 +99,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
  - embeded the utube vedio and make it autoplay and mute 
  - added tailwind css to make main container look awesome
  - Build secandary component
+ - gpt search feature 
+ - gpt search page , gpt search bar
+ - multilanguage feature
+
 
 
 # Features 
